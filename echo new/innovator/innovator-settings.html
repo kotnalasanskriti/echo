@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Settings | ECHO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="innovator-settings.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+   
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-name">ECHO<span>.</span></span>
+        <small>IDEAS MEET OPPORTUNITY</small>
+    </a>
+
+    <div class="nav-group">
+        <p class="nav-heading">WORKSPACE</p>
+        <a href="innovator-dashboard.html" class="nav-link">Overview</a>
+        <a href="innovator-workspace.html" class="nav-link">My Workspace</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">OPPORTUNITIES</p>
+        <a href="innovator-network.html" class="nav-link">Find Investors</a>
+        <a href="innovator-network.html#connections" class="nav-link">Connections & Messages</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">COMMUNITY & GROWTH</p>
+        <a href="innovator-community.html" class="nav-link">ECHO Commons</a>
+        <a href="innovator-growth.html" class="nav-link">Growth & AI Assistant</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">ACCOUNT</p>
+        <a href="innovator-settings.html" class="nav-link">My Profile & Settings</a>
+    </div>
+
+    <div class="sidebar-bottom">
+
+        <button class="logout-btn" id="logoutBtn">
+            <span>↪</span> Logout
+        </button>
+
+        <div class="sidebar-tagline">
+            Built on ideas.<br>
+            Powered by people.
+        </div>
+
+    </div>
+
+</aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="top-label">ACCOUNT MANAGEMENT</p>
+                <h2>Profile & Settings</h2>
+            </div>
+
+        
+
+    <div class="topbar-user">
+
+        <div class="user-avatar" id="userAvatar">I</div>
+
+        <div>
+            <strong id="userName">Innovator</strong>
+            <small>Innovator Account</small>
+        </div>
+
+    </div>
+
+</header>
+        </header>
+
+
+        <!-- PAGE INTRO -->
+        <section class="welcome-section">
+            <p class="section-label">YOUR IDENTITY ON ECHO</p>
+
+            <h1>Make your profile <em>your own.</em></h1>
+
+            <p>
+                Tell the ECHO community who you are, what you do
+                and what you are working towards.
+            </p>
+        </section>
+
+
+        <div class="settings-layout">
+
+            <!-- PROFILE FORM -->
+            <section class="settings-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="section-label">PERSONAL INFORMATION</p>
+                        <h2>Basic Profile</h2>
+                    </div>
+                    <span class="edit-icon">✎</span>
+                </div>
+
+
+                <!-- PROFILE PHOTO -->
+                <div class="photo-section">
+
+                    <div class="photo-preview" id="photoPreview">
+                        I
+                    </div>
+
+                    <div class="photo-actions">
+                        <h3>Profile Photo</h3>
+                        <p>Upload a picture to represent yourself.</p>
+
+                        <input
+                            type="file"
+                            id="photoInput"
+                            accept="image/png,image/jpeg,image/webp"
+                            hidden
+                        >
+
+                        <button type="button" class="secondary-btn" id="uploadPhotoBtn">
+                            Upload Photo
+                        </button>
+
+                        <button type="button" class="remove-photo" id="removePhotoBtn">
+                            Remove Photo
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <form id="profileForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" disabled>
+                            <small>Email cannot be changed here.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Your city">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="education">Education</label>
+                            <input type="text" id="education" placeholder="Your education">
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+                        <label for="introduction">About Me</label>
+
+                        <textarea
+                            id="introduction"
+                            rows="5"
+                            maxlength="500"
+                            placeholder="Tell the ECHO community about yourself..."
+                        ></textarea>
+
+                        <small>Maximum 500 characters.</small>
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label for="skills">Your Skills</label>
+
+                        <input
+                            type="text"
+                            id="skills"
+                            placeholder="Example: Marketing, Python, Business Strategy"
+                        >
+
+                        <small>Separate your skills using commas.</small>
+
+                    </div>
+
+
+                    <button type="submit" class="primary-btn">
+                        Save Profile Changes
+                    </button>
+
+                    <p id="profileMessage" class="form-message"></p>
+
+                </form>
+
+            </section>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-column">
+
+                <!-- PROFILE PREVIEW -->
+                <section class="preview-card">
+
+                    <p class="section-label">PROFILE PREVIEW</p>
+
+                    <div class="preview-avatar" id="previewAvatar">I</div>
+
+                    <h2 id="previewName">Innovator</h2>
+
+                    <p id="previewLocation">Your location</p>
+
+                    <div class="preview-divider"></div>
+
+                    <h4>About</h4>
+
+                    <p id="previewAbout">
+                        Your introduction will appear here.
+                    </p>
+
+                    <h4>Skills</h4>
+
+                    <div id="previewSkills" class="skill-list">
+                        <span>No skills added</span>
+                    </div>
+
+                </section>
+
+
+                <!-- NOTIFICATION SETTINGS -->
+                <section class="settings-card notification-card">
+
+                    <p class="section-label">PREFERENCES</p>
+                    <h2>Notifications</h2>
+
+                    <p class="card-description">
+                        Choose which updates you want to receive.
+                    </p>
+
+                    <div class="setting-option">
+                        <div>
+                            <h4>Connection Requests</h4>
+                            <p>When someone wants to connect with you.</p>
+                        </div>
+
+                        <input type="checkbox" id="connectionNotifications">
+                    </div>
+
+                    <div class="setting-option">
+                        <div>
+                            <h4>Messages</h4>
+                            <p>When you receive a new message.</p>
+                        </div>
+
+                        <input type="checkbox" id="messageNotifications">
+                    </div>
+
+                    <div class="setting-option">
+                        <div>
+                            <h4>Community Updates</h4>
+                            <p>Updates from ECHO Commons.</p>
+                        </div>
+
+                        <input type="checkbox" id="communityNotifications">
+                    </div>
+
+                    <div class="setting-option">
+                        <div>
+                            <h4>Platform Updates</h4>
+                            <p>Important ECHO announcements.</p>
+                        </div>
+
+                        <input type="checkbox" id="platformNotifications">
+                    </div>
+
+                    <button type="button" class="primary-btn" id="saveNotifications">
+                        Save Preferences
+                    </button>
+
+                    <p id="notificationMessage" class="form-message"></p>
+
+                </section>
+
+
+                <!-- ACCOUNT INFORMATION -->
+                <section class="settings-card account-card">
+
+                    <p class="section-label">ACCOUNT</p>
+                    <h2>Account Information</h2>
+
+                    <div class="account-detail">
+                        <span>Account Type</span>
+                        <strong>Innovator</strong>
+                    </div>
+
+                    <div class="account-detail">
+                        <span>Registered Email</span>
+                        <strong id="accountEmail">Not available</strong>
+                    </div>
+
+                    <div class="account-detail">
+                        <span>Profile Status</span>
+                        <strong id="accountStatus">Incomplete</strong>
+                    </div>
+
+                    <p class="account-note">
+                        Password and security management will be connected
+                        to the backend in a future version.
+                    </p>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+        <footer class="page-footer">
+            <h3>ECHO<span>.</span></h3>
+            <p>Built on ideas. Powered by people.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="innovator-settings.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO Commons | ECHO.</title>
+
+    <link rel="stylesheet" href="innovator-community.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+   
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-name">ECHO<span>.</span></span>
+        <small>IDEAS MEET OPPORTUNITY</small>
+    </a>
+
+    <div class="nav-group">
+        <p class="nav-heading">WORKSPACE</p>
+        <a href="innovator-dashboard.html" class="nav-link">Overview</a>
+        <a href="innovator-workspace.html" class="nav-link">My Workspace</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">OPPORTUNITIES</p>
+        <a href="innovator-network.html" class="nav-link">Find Investors</a>
+        <a href="innovator-network.html#connections" class="nav-link">Connections & Messages</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">COMMUNITY & GROWTH</p>
+        <a href="innovator-community.html" class="nav-link active">ECHO Commons</a>
+        <a href="innovator-growth.html" class="nav-link">Growth & AI Assistant</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">ACCOUNT</p>
+        <a href="innovator-settings.html" class="nav-link">My Profile & Settings</a>
+    </div>
+
+    <div class="sidebar-bottom">
+
+        <button class="logout-btn" id="logoutBtn">
+            <span>↪</span> Logout
+        </button>
+
+        <div class="sidebar-tagline">
+            Built on ideas.<br>
+            Powered by people.
+        </div>
+
+    </div>
+
+</aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <p class="topbar-label">INNOVATOR / COMMUNITY</p>
+                <h2>ECHO Commons</h2>
+            </div>
+
+            <div class="topbar-user">
+
+                <div class="user-avatar" id="userAvatar">I</div>
+
+                <div>
+                    <strong id="userName">Innovator</strong>
+                    <small>Innovator Account</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero-section">
+
+            <p class="eyebrow">THE COMMUNITY OF CREATORS</p>
+
+            <h1>Ideas grow stronger<br><span>when shared.</span></h1>
+
+            <p>
+                Share what you are building, exchange knowledge,
+                ask questions, and learn from people on the same journey.
+            </p>
+
+            <a href="#create-post" class="primary-btn">
+                Share Something <span>＋</span>
+            </a>
+
+        </section>
+
+
+        <!-- COMMUNITY STATS -->
+        <section class="community-stats">
+
+            <div class="stat-card">
+                <span>Community Posts</span>
+                <h2 id="postCount">0</h2>
+                <small>Ideas and updates shared</small>
+            </div>
+
+            <div class="stat-card">
+                <span>My Posts</span>
+                <h2 id="myPostCount">0</h2>
+                <small>Your contributions</small>
+            </div>
+
+            <div class="stat-card">
+                <span>My Likes</span>
+                <h2 id="myLikesCount">0</h2>
+                <small>Posts you appreciated</small>
+            </div>
+
+        </section>
+
+
+        <!-- COMMUNITY LAYOUT -->
+        <div class="community-layout">
+
+
+            <!-- FEED -->
+            <section class="feed-section" id="community-feed">
+
+                <div class="feed-heading">
+
+                    <div>
+                        <p class="eyebrow">01 / THE COMMONS</p>
+                        <h2>Community feed.</h2>
+                    </div>
+
+                    <select id="categoryFilter">
+                        <option value="All">All discussions</option>
+                        <option>Startup Ideas</option>
+                        <option>Technology</option>
+                        <option>Learning</option>
+                        <option>Questions</option>
+                        <option>Achievements</option>
+                        <option>General</option>
+                    </select>
+
+                </div>
+
+
+                <!-- SEARCH -->
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input
+                        type="search"
+                        id="postSearch"
+                        placeholder="Search discussions, ideas or topics..."
+                    >
+                </div>
+
+
+                <!-- POSTS WILL APPEAR HERE -->
+                <div id="postFeed" class="post-feed"></div>
+
+
+                <!-- EMPTY STATE -->
+                <div id="emptyFeed" class="empty-state hidden">
+
+                    <div class="empty-icon">✳</div>
+
+                    <h3>No discussions found.</h3>
+
+                    <p>
+                        Try another search or start a new discussion.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="community-sidebar">
+
+
+                <!-- CREATE POST -->
+                <section class="create-post-card" id="create-post">
+
+                    <p class="eyebrow">02 / SHARE YOUR VOICE</p>
+
+                    <h2>What's on your mind?</h2>
+
+                    <p class="card-description">
+                        Every conversation can lead to something meaningful.
+                    </p>
+
+                    <form id="postForm">
+
+                        <div class="form-group">
+
+                            <label for="postTitle">Post title</label>
+
+                            <input
+                                type="text"
+                                id="postTitle"
+                                placeholder="Give your post a title..."
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="postCategory">Category</label>
+
+                            <select id="postCategory" required>
+
+                                <option value="">Choose category</option>
+                                <option>Startup Ideas</option>
+                                <option>Technology</option>
+                                <option>Learning</option>
+                                <option>Questions</option>
+                                <option>Achievements</option>
+                                <option>General</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="postContent">Your thoughts</label>
+
+                            <textarea
+                                id="postContent"
+                                rows="5"
+                                placeholder="Share your thoughts with the community..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="primary-btn full-btn">
+                            Publish Post →
+                        </button>
+
+                        <p id="postMessage" class="success-message"></p>
+
+                    </form>
+
+                </section>
+
+
+                <!-- COMMUNITY GUIDELINES -->
+                <section class="guidelines-card">
+
+                    <p class="eyebrow">A FEW GOOD RULES</p>
+
+                    <h3>Keep the conversation meaningful.</h3>
+
+                    <ul>
+                        <li>Respect different ideas and opinions.</li>
+                        <li>Share useful and constructive feedback.</li>
+                        <li>Ask questions without hesitation.</li>
+                        <li>Support people building something new.</li>
+                    </ul>
+
+                </section>
+
+
+                <!-- COMMUNITY MESSAGE -->
+                <section class="community-message">
+
+                    <span>✳</span>
+
+                    <h3>Built on ideas.<br>Powered by people.</h3>
+
+                    <p>
+                        The best communities don't just share ideas.
+                        They help ideas move forward.
+                    </p>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+
+            <span>ECHO<span class="footer-dot">.</span></span>
+
+            <p>Built on ideas. Powered by people.</p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="innovator-community.js"></script>
+
+</body>
+</html>
