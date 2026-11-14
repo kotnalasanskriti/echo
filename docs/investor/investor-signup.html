@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Sign Up | ECHO</title>
+    <link rel="stylesheet" href="investor-auth.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="index.html" class="logo">ECHO<span>.</span></a>
+        <a href="investor-login.html" class="top-link">Already a member? Sign in</a>
+    </header>
+
+    <main class="auth-layout">
+
+        <section class="intro-panel">
+            <p class="eyebrow">YOUR NEXT OPPORTUNITY STARTS HERE</p>
+
+            <h1>Be part of the ideas shaping tomorrow.</h1>
+
+            <p class="intro-text">
+                Meet ambitious innovators, explore new ventures
+                and discover ideas worth believing in.
+            </p>
+
+            <p class="intro-note">Connect. Discover. Grow.</p>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-content">
+
+                <p class="eyebrow">JOIN THE COMMUNITY</p>
+                <h2>Create your account</h2>
+
+                <p class="form-description">
+                    Start discovering ideas and connecting with innovators.
+                </p>
+
+                <form id="signupForm">
+
+                    <label for="signupName">Full name</label>
+                    <input
+                        type="text"
+                        id="signupName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                    <label for="signupEmail">Email address</label>
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="signupPassword">Create password</label>
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+
+                    <label for="confirmPassword">Confirm password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Enter password again"
+                        minlength="6"
+                        required
+                    >
+
+                    <label class="terms-option">
+                        <input type="checkbox" id="terms" required>
+                        I agree to the terms and conditions.
+                    </label>
+
+                    <button type="submit" class="main-button">
+                        Create account
+                    </button>
+
+                    <p id="signupMessage" class="message"></p>
+
+                </form>
+
+                <p class="bottom-text">
+                    Already have an account?
+                    <a href="investor-login.html">Sign in</a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="investor-auth.js"></script>
+</body>
+</html>

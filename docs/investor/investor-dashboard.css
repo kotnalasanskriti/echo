@@ -1,0 +1,1154 @@
+
+/* ECHO INVESTOR DASHBOARD */
+
+:root {
+    --asphalt: #110805;
+    --mountain: #EAE2D7;
+    --ivory: #F6F1E9;
+    --brown: #766B60;
+    --line: #DED4C8;
+    --white: #FFFEFC;
+    --muted: #9A8F84;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--ivory);
+    color: var(--asphalt);
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* MAIN LAYOUT */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 258px;
+    flex-shrink: 0;
+    min-height: 100vh;
+    padding: 34px 22px 24px;
+    background: var(--asphalt);
+    color: var(--mountain);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand {
+    display: inline-block;
+    color: var(--ivory);
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 35px;
+    letter-spacing: -2px;
+    font-weight: bold;
+}
+
+.brand span {
+    color: #B79A7B;
+}
+
+.portal-name {
+    color: #A99B8B;
+    font-size: 9px;
+    letter-spacing: 2.4px;
+    margin-top: 7px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(234, 226, 215, 0.16);
+}
+
+
+/* SIDEBAR NAVIGATION */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 27px;
+}
+
+.nav-caption {
+    color: #938579;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    margin: 0 0 10px 11px;
+}
+
+.second-caption {
+    margin-top: 29px;
+}
+
+.nav-link {
+    width: 100%;
+    padding: 12px 13px;
+    border: 0;
+    border-left: 2px solid transparent;
+    border-radius: 0 5px 5px 0;
+    background: transparent;
+    color: #C9BEB2;
+    text-align: left;
+    font-size: 13px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+    background: rgba(234, 226, 215, 0.08);
+    color: var(--ivory);
+}
+
+.nav-link.active {
+    background: rgba(234, 226, 215, 0.12);
+    border-left-color: #C6A98A;
+    color: var(--ivory);
+}
+
+
+/* SIDEBAR BOTTOM */
+
+.sidebar-bottom {
+    padding-top: 25px;
+    border-top: 1px solid rgba(234, 226, 215, 0.16);
+}
+
+.sidebar-note {
+    color: #C9BEB2;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.45;
+    margin-bottom: 22px;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #66594F;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--ivory);
+    text-align: left;
+    font-size: 12px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #2B1E18;
+    border-color: #A99B8B;
+}
+
+.sidebar-copy {
+    color: #8F8276;
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 19px;
+}
+
+
+/* MAIN CONTENT */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 34px clamp(22px, 4vw, 62px) 22px;
+    overflow: hidden;
+}
+
+.topbar {
+    min-height: 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+    color: var(--brown);
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.topbar h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 23px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+}
+
+.account-mark {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #CBBEAF;
+    border-radius: 50%;
+    color: var(--asphalt);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+
+/* PAGE SHOW AND HIDE */
+
+.page {
+    display: none;
+}
+
+.active-page {
+    display: block;
+}
+
+
+/* WELCOME SECTION */
+
+.welcome-box {
+    min-height: 330px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    background: var(--mountain);
+    margin-bottom: 48px;
+}
+
+.welcome-copy {
+    padding: clamp(28px, 4vw, 53px);
+}
+
+.welcome-copy h1 {
+    max-width: 570px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(34px, 4vw, 51px);
+    font-weight: normal;
+    letter-spacing: -1.8px;
+    line-height: 1.08;
+    margin: 17px 0;
+}
+
+.welcome-description {
+    max-width: 470px;
+    color: var(--brown);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    padding: 13px 17px;
+    margin-top: 24px;
+    border: 1px solid var(--asphalt);
+    border-radius: 3px;
+    background: var(--asphalt);
+    color: var(--ivory);
+    font-size: 12px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.primary-btn span {
+    font-size: 16px;
+    line-height: 10px;
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: var(--asphalt);
+}
+
+.welcome-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 35px;
+    background: #DED3C6;
+}
+
+.welcome-side-label {
+    color: var(--brown);
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    margin-bottom: 18px;
+}
+
+.welcome-quote {
+    max-width: 240px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 25px;
+    line-height: 1.35;
+}
+
+.welcome-rule {
+    width: 42px;
+    height: 1px;
+    background: var(--brown);
+    margin: 25px 0 14px;
+}
+
+.welcome-side-small {
+    color: var(--brown);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+}
+
+.section-heading h2,
+.page-intro h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    letter-spacing: -0.7px;
+}
+
+.section-heading h2 {
+    font-size: 26px;
+}
+
+.section-aside {
+    color: var(--brown);
+    font-size: 11px;
+    padding-bottom: 4px;
+}
+
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 21px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.stat-card {
+    padding: 22px 24px 22px 0;
+    border-right: 1px solid var(--line);
+}
+
+.stat-card + .stat-card {
+    padding-left: 24px;
+}
+
+.stat-card:last-child {
+    border-right: 0;
+}
+
+.stat-card p {
+    color: var(--brown);
+    font-size: 11px;
+}
+
+.stat-card h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 9px 0 5px;
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+
+/* RECENT PROJECTS HEADING */
+
+.recent-heading {
+    margin: 45px 0 20px;
+}
+
+.text-link {
+    padding: 0 0 4px;
+    border: 0;
+    border-bottom: 1px solid #B9AA9A;
+    background: transparent;
+    color: var(--asphalt);
+    font-size: 11px;
+}
+
+.text-link span {
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+.text-link:hover {
+    border-color: var(--asphalt);
+}
+
+
+/* PROJECT CARDS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.project-card {
+    position: relative;
+    min-width: 0;
+    padding: 23px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #A99B8B;
+    transform: translateY(-2px);
+}
+
+.category {
+    display: inline-block;
+    color: var(--brown);
+    font-size: 9px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--line);
+}
+
+.project-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: normal;
+    margin: 16px 0 9px;
+}
+
+.project-card p {
+    color: var(--brown);
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.project-actions button {
+    padding: 9px 12px;
+    border: 1px solid var(--asphalt);
+    border-radius: 2px;
+    background: var(--asphalt);
+    color: var(--ivory);
+    font-size: 10px;
+    transition: all 0.2s ease;
+}
+
+.project-actions button:hover {
+    background: #4A3A30;
+}
+
+.project-actions .save-btn {
+    background: transparent;
+    color: var(--asphalt);
+}
+
+.project-actions .save-btn:hover {
+    background: var(--mountain);
+}
+
+
+/* INNER PAGES */
+
+.page-intro {
+    padding: 12px 0 26px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 26px;
+}
+
+.page-intro h1 {
+    font-size: clamp(32px, 4vw, 43px);
+    margin-bottom: 10px;
+}
+
+.description {
+    color: var(--brown);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* SEARCH BOX */
+
+.search-wrap {
+    max-width: 620px;
+    margin: 25px 0 12px;
+}
+
+.search-wrap label,
+.form-field label {
+    display: block;
+    color: var(--brown);
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+#searchInput,
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    outline: none;
+    background: var(--white);
+    color: var(--asphalt);
+    font-size: 12px;
+}
+
+#searchInput:focus,
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--brown);
+}
+
+#searchInput::placeholder,
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #A99E93;
+}
+
+
+/* PROFILE FORM */
+
+#profileForm {
+    max-width: 760px;
+    padding: 27px;
+    background: var(--white);
+    border: 1px solid var(--line);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    min-width: 0;
+}
+
+.full-field {
+    grid-column: 1 / -1;
+}
+
+.form-field textarea {
+    min-height: 115px;
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.form-message {
+    display: inline-block;
+    margin-left: 12px;
+    color: #536B4D;
+    font-size: 11px;
+}
+
+
+/* NOTIFICATIONS */
+
+.notification-card {
+    max-width: 760px;
+    padding: 21px 23px;
+    margin-bottom: 12px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 3px solid #B9AA9A;
+}
+
+.notification-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.notification-card p {
+    color: var(--brown);
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 7px;
+}
+
+.notification-card button {
+    padding: 7px 0;
+    margin-top: 12px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    color: var(--asphalt);
+    font-size: 10px;
+}
+
+
+/* EMPTY MESSAGE */
+
+.empty-message {
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    color: var(--brown);
+    font-size: 12px;
+}
+
+
+/* FOOTER */
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 22px;
+    margin-top: 55px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 0.3px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .welcome-box {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-side {
+        min-height: 190px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .dashboard {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 18px 20px;
+    }
+
+    .brand {
+        font-size: 30px;
+    }
+
+    .portal-name {
+        padding-bottom: 14px;
+    }
+
+    .sidebar-nav {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .nav-caption,
+    .second-caption {
+        display: none;
+    }
+
+    .nav-link {
+        width: auto;
+        padding: 9px 10px;
+        border-left: 0;
+        border-bottom: 2px solid transparent;
+        border-radius: 2px;
+        font-size: 11px;
+    }
+
+    .nav-link.active {
+        border-bottom-color: #C6A98A;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main-content {
+        padding: 25px 20px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card,
+    .stat-card + .stat-card {
+        padding: 17px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .stat-card:last-child {
+        border-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-copy {
+        padding: 28px 23px;
+    }
+
+    .welcome-copy h1 {
+        font-size: 36px;
+    }
+
+    .welcome-side {
+        padding: 25px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-aside {
+        padding: 0;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-field {
+        grid-column: auto;
+    }
+
+    #profileForm {
+        padding: 20px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+    }
+
+    .topbar h2 {
+        font-size: 20px;
+    }
+
+}
+.profile-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #110805;
+    color: #F6F1E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   ECHO - CONNECTIONS & MESSAGING
+   Matches the existing investor dashboard
+========================================= */
+
+/* Main notification layout */
+
+#notificationList {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding: 0;
+    color: var(--asphalt);
+}
+
+#notificationList section {
+    width: 100%;
+    max-width: 760px;
+}
+
+#notificationList section > h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 25px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    color: var(--asphalt);
+    margin: 0 0 15px;
+}
+
+/* Notification cards */
+
+#notificationList .notification-card {
+    max-width: 760px;
+    padding: 21px 23px;
+    margin: 0 0 12px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 3px solid #B9AA9A;
+    border-radius: 0;
+    box-shadow: none;
+    transition: border-color 0.2s ease;
+}
+
+#notificationList .notification-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #B9AA9A;
+}
+
+#notificationList .notification-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 19px;
+    font-weight: normal;
+    color: var(--asphalt);
+    margin: 0 0 7px;
+}
+
+#notificationList .notification-card p {
+    color: var(--brown);
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 5px 0;
+}
+
+#notificationList .notification-card small {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+/* Action buttons */
+
+#notificationList .notification-actions {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-top: 15px;
+}
+
+#notificationList .notification-card button {
+    padding: 7px 0;
+    margin: 10px 12px 0 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+    color: var(--asphalt);
+    font-size: 11px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+#notificationList .notification-card button:hover {
+    background: transparent;
+    border-bottom-color: var(--asphalt);
+    transform: none;
+}
+
+/* Accept and decline distinction */
+
+#notificationList button[data-action="accept-request"] {
+    color: var(--asphalt);
+    border-bottom-color: var(--asphalt);
+}
+
+#notificationList button[data-action="decline-request"] {
+    color: var(--brown);
+    border-bottom-color: var(--line);
+}
+
+#notificationList button[data-action="open-chat"] {
+    padding: 9px 14px;
+    margin-top: 10px;
+    border: 1px solid var(--asphalt);
+    background: var(--asphalt);
+    color: var(--ivory);
+}
+
+#notificationList button[data-action="open-chat"]:hover {
+    background: #4A3A30;
+    color: var(--ivory);
+}
+
+/* Accepted connections */
+
+#notificationList .connection-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-left-color: #8D9B82;
+}
+
+#notificationList .connection-card h3 {
+    margin: 0;
+}
+
+#notificationList .connection-card p {
+    margin-right: auto;
+}
+
+/* Sent requests */
+
+#notificationList .sent-connection-requests .notification-card {
+    border-left-color: #B9AA9A;
+}
+
+/* Empty states */
+
+#notificationList .empty-message {
+    max-width: 760px;
+    padding: 22px 23px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    color: var(--brown);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MESSAGING
+========================================= */
+
+#notificationList .investor-chat-panel {
+    max-width: 760px;
+    padding: 25px;
+    margin-top: 0;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#notificationList .investor-chat-panel > h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: var(--asphalt);
+    margin: 0 0 8px;
+}
+
+#notificationList .investor-chat-panel > p {
+    color: var(--brown);
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+
+/* Conversation area */
+
+#notificationList .chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    margin-bottom: 16px;
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: 0;
+}
+
+#notificationList .chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+#notificationList .chat-messages::-webkit-scrollbar-thumb {
+    background: #C9BBAE;
+}
+
+/* Message bubbles */
+
+#notificationList .message-bubble {
+    max-width: 72%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 15px;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+#notificationList .message-bubble.sent {
+    align-self: flex-end;
+    background: var(--asphalt);
+    color: var(--ivory);
+}
+
+#notificationList .message-bubble.received {
+    align-self: flex-start;
+    background: var(--mountain);
+    color: var(--asphalt);
+}
+
+#notificationList .message-bubble .message-time {
+    font-size: 9px;
+    color: inherit;
+    opacity: 0.65;
+    align-self: flex-end;
+}
+
+/* Message input */
+
+#notificationList #investorMessageForm {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+}
+
+#notificationList #investorMessageInput {
+    flex: 1;
+    min-width: 0;
+    height: 43px;
+    padding: 11px 13px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    outline: none;
+    background: var(--white);
+    color: var(--asphalt);
+    font-size: 12px;
+}
+
+#notificationList #investorMessageInput:focus {
+    border-color: var(--brown);
+}
+
+#notificationList #investorMessageInput::placeholder {
+    color: #A99E93;
+}
+
+#notificationList #investorSendMessageBtn {
+    min-width: 75px;
+    height: 43px;
+    padding: 0 16px;
+    border: 1px solid var(--asphalt);
+    border-radius: 2px;
+    background: var(--asphalt);
+    color: var(--ivory);
+    font-size: 11px;
+    transition: background 0.2s ease;
+}
+
+#notificationList #investorSendMessageBtn:hover:not(:disabled) {
+    background: #4A3A30;
+}
+
+#notificationList #investorSendMessageBtn:disabled {
+    background: var(--mountain);
+    border-color: var(--line);
+    color: var(--muted);
+    cursor: not-allowed;
+}
+
+#notificationList #investorMessageInput:disabled {
+    background: var(--ivory);
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+
+    #notificationList {
+        gap: 27px;
+    }
+
+    #notificationList .notification-card {
+        padding: 17px;
+    }
+
+    #notificationList .investor-chat-panel {
+        padding: 17px;
+    }
+
+    #notificationList .chat-messages {
+        height: 260px;
+        padding: 13px;
+    }
+
+    #notificationList .message-bubble {
+        max-width: 88%;
+    }
+
+    #notificationList .connection-card {
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    #notificationList #investorMessageForm {
+        gap: 6px;
+    }
+
+    #notificationList #investorSendMessageBtn {
+        min-width: 62px;
+        padding: 0 10px;
+    }
+
+}

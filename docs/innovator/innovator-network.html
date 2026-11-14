@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network | ECHO.</title>
+    <link rel="stylesheet" href="innovator-network.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-layout">
+
+   
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-name">ECHO<span>.</span></span>
+        <small>IDEAS MEET OPPORTUNITY</small>
+    </a>
+
+    <div class="nav-group">
+        <p class="nav-heading">WORKSPACE</p>
+        <a href="innovator-dashboard.html" class="nav-link">Overview</a>
+        <a href="innovator-workspace.html" class="nav-link">My Workspace</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">OPPORTUNITIES</p>
+        <a href="innovator-network.html" class="nav-link active">
+    Find Investors
+</a>
+        <a href="innovator-network.html#connections" class="nav-link ">Connections & Messages</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">COMMUNITY & GROWTH</p>
+        <a href="innovator-community.html" class="nav-link">ECHO Commons</a>
+        <a href="innovator-growth.html" class="nav-link">Growth & AI Assistant</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">ACCOUNT</p>
+        <a href="innovator-settings.html" class="nav-link">My Profile & Settings</a>
+    </div>
+
+    <div class="sidebar-bottom">
+
+        <button class="logout-btn" id="logoutBtn">
+            <span>↪</span> Logout
+        </button>
+
+        <div class="sidebar-tagline">
+            Built on ideas.<br>
+            Powered by people.
+        </div>
+
+    </div>
+
+</aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="topbar-label">INNOVATOR / NETWORK</p>
+                <h2>Build Your Network</h2>
+            </div>
+
+            <div class="topbar-user">
+                <div class="user-avatar" id="userAvatar">I</div>
+                <div>
+                    <strong id="userName">Innovator</strong>
+                    <small>Innovator Account</small>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero-section">
+            <p class="eyebrow">THE POWER OF CONNECTION</p>
+            <h1>Good ideas deserve<br><span>the right people.</span></h1>
+            <p>
+                Discover investors, build meaningful relationships,
+                and bring the right people into your journey.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#investors" class="primary-btn">Explore Investors →</a>
+                <a href="#pitch-room" class="secondary-btn">Prepare Your Pitch</a>
+            </div>
+        </section>
+
+
+        <!-- NETWORK STATS -->
+        <section class="network-stats">
+            <div class="stat-card">
+                <span>Available Investors</span>
+                <h2 id="investorCount">0</h2>
+                <small>Explore opportunities</small>
+            </div>
+
+            <div class="stat-card">
+                <span>My Connections</span>
+                <h2 id="connectionCount">0</h2>
+                <small>People in your network</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Pending Requests</span>
+                <h2 id="pendingCount">0</h2>
+                <small>Awaiting response</small>
+            </div>
+        </section>
+
+
+        <!-- PAGE TABS -->
+        <div class="network-tabs">
+            <a href="#investors" class="network-tab active">Find Investors</a>
+            <a href="#connections" class="network-tab">Connections</a>
+            <a href="#messages" class="network-tab">Messages</a>
+            <a href="#pitch-room" class="network-tab">Pitch Room</a>
+        </div>
+
+
+        <!-- FIND INVESTORS -->
+        <section class="content-section" id="investors">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">01 / DISCOVER PEOPLE</p>
+                    <h2>Find your next connection.</h2>
+                    <p>Explore people who may be interested in your startup journey.</p>
+                </div>
+            </div>
+
+            <div class="investor-filters">
+                <input type="search" id="investorSearch" placeholder="Search by name or interest...">
+
+                <select id="investorIndustry">
+                    <option value="All">All industries</option>
+                    <option>Technology</option>
+                    <option>Healthcare</option>
+                    <option>Education</option>
+                    <option>Finance</option>
+                    <option>Environment</option>
+                    <option>Consumer</option>
+                </select>
+            </div>
+
+            <div id="investorGrid" class="investor-grid"></div>
+
+            <div id="investorEmpty" class="empty-state hidden">
+                <h3>No investors found.</h3>
+                <p>Try another name or industry.</p>
+            </div>
+
+        </section>
+
+
+        <!-- CONNECTIONS -->
+        <section class="content-section" id="connections">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">02 / YOUR NETWORK</p>
+                    <h2>Connections that matter.</h2>
+                    <p>Manage the people you have connected with.</p>
+                </div>
+            </div>
+
+            <div class="connection-panel">
+                <h3>My Connections</h3>
+                <div id="connectionList"></div>
+            </div>
+
+            <div class="connection-panel pending-panel">
+                <h3>Pending Requests</h3>
+                <div id="pendingList"></div>
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGES -->
+        <section class="content-section" id="messages">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">03 / START A CONVERSATION</p>
+                    <h2>Every opportunity starts with a hello.</h2>
+                    <p>Choose a connection and start a conversation.</p>
+                </div>
+            </div>
+
+            <div class="message-layout">
+
+                <div class="message-people">
+                    <h3>Your People</h3>
+                    <div id="messagePeople"></div>
+                </div>
+
+                <div class="chat-panel">
+                    <div class="chat-header">
+                        <div class="chat-avatar" id="chatAvatar">E</div>
+                        <div>
+                            <h3 id="chatName">Select a connection</h3>
+                            <small id="chatStatus">Your conversations will appear here</small>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages">
+                        <p class="chat-placeholder">
+                            Select a connection to start a conversation.
+                        </p>
+                    </div>
+
+                    <form class="chat-input-area" id="messageForm">
+                        <input type="text" id="messageInput"
+                            placeholder="Write a message..." autocomplete="off" disabled>
+                        <button type="submit" id="sendMessageBtn" disabled>Send →</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PITCH ROOM -->
+        <section class="content-section" id="pitch-room">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">04 / PRESENT YOUR VISION</p>
+                    <h2>Welcome to your Pitch Room.</h2>
+                    <p>Organise your startup story before presenting it to investors.</p>
+                </div>
+            </div>
+
+            <div class="pitch-layout">
+
+                <div class="pitch-form-card">
+                    <h3>Build your pitch.</h3>
+                    <p class="pitch-description">Prepare a clear introduction to your venture.</p>
+
+                    <form id="pitchForm">
+
+                        <div class="form-group">
+                            <label for="pitchProject">Select your project</label>
+                            <select id="pitchProject" required>
+                                <option value="">Choose a project</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pitchTagline">One-line pitch</label>
+                            <input type="text" id="pitchTagline"
+                                placeholder="Describe your startup in one sentence" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pitchProblem">The problem</label>
+                            <textarea id="pitchProblem" rows="3"
+                                placeholder="What problem are you solving?" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pitchSolution">Your solution</label>
+                            <textarea id="pitchSolution" rows="3"
+                                placeholder="How does your startup solve it?" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pitchMarket">Target market</label>
+                            <input type="text" id="pitchMarket"
+                                placeholder="Who are your customers?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pitchAsk">What are you looking for?</label>
+                            <textarea id="pitchAsk" rows="3"
+                                placeholder="Funding, mentorship, partnerships, etc."></textarea>
+                        </div>
+
+                        <button type="submit" class="primary-btn">Save My Pitch →</button>
+                        <p id="pitchMessage" class="success-message"></p>
+
+                    </form>
+                </div>
+
+
+                <div class="pitch-preview">
+                    <p class="eyebrow">YOUR PITCH PREVIEW</p>
+                    <div class="preview-mark">ECHO<span>.</span></div>
+
+                    <h2 id="previewTitle">Your idea.<br>Your vision.</h2>
+                    <p id="previewTagline">Your one-line pitch will appear here.</p>
+
+                    <div class="preview-divider"></div>
+
+                    <h4>The Problem</h4>
+                    <p id="previewProblem">Your problem statement will appear here.</p>
+
+                    <h4>The Solution</h4>
+                    <p id="previewSolution">Your solution will appear here.</p>
+
+                    <h4>Target Market</h4>
+                    <p id="previewMarket">Your target audience will appear here.</p>
+
+                    <h4>Looking For</h4>
+                    <p id="previewAsk">Your requirements will appear here.</p>
+
+                    <small class="preview-footer">BUILT ON IDEAS. POWERED BY PEOPLE.</small>
+                </div>
+
+            </div>
+        </section>
+
+
+        <footer class="page-footer">
+            <span>ECHO<span class="footer-dot">.</span></span>
+            <p>Built on ideas. Powered by people.</p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="innovator-network.js"></script>
+</body>
+</html>

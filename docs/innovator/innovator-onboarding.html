@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ECHO | Founder Journey</title>
+
+    <link rel="stylesheet" href="innovator-onboarding.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-name">ECHO<span>.</span></span>
+            <span class="logo-tagline">IDEAS MEET OPPORTUNITY</span>
+        </a>
+
+        <div class="nav-right">
+            <span class="journey-label">YOUR FOUNDER JOURNEY</span>
+            <a href="innovator-login.html" class="logout-link">Log out ↗</a>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN PAGE -->
+    <main class="main-container">
+
+
+        <!-- INTRODUCTION -->
+        <section class="intro-section">
+
+            <div class="intro-text">
+
+                <span class="eyebrow">
+                    WELCOME TO YOUR NEXT CHAPTER
+                </span>
+
+                <h1>
+                    Let's build something<br>
+                    <span>that matters.</span>
+                </h1>
+
+                <p>
+                    Every great venture begins with a person
+                    who believes in an idea. Tell us your story
+                    and create your identity in ECHO.
+                </p>
+
+            </div>
+
+           
+
+        </section>
+
+
+        <!-- PROGRESS TRACKER -->
+        <section class="progress-section">
+
+            <div class="progress-top">
+
+                <span id="stepCounter">STEP 01 / 05</span>
+
+                <span id="stepTitle">YOUR IDENTITY</span>
+
+            </div>
+
+
+            <div class="progress-track">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+
+            <div class="step-navigation">
+
+                <div class="step-item active" data-label="1">
+                    <span class="step-number">01</span>
+                    <span>Identity</span>
+                </div>
+
+                <div class="step-item" data-label="2">
+                    <span class="step-number">02</span>
+                    <span>Background</span>
+                </div>
+
+                <div class="step-item" data-label="3">
+                    <span class="step-number">03</span>
+                    <span>Skills</span>
+                </div>
+
+                <div class="step-item" data-label="4">
+                    <span class="step-number">04</span>
+                    <span>Ambition</span>
+                </div>
+
+                <div class="step-item" data-label="5">
+                    <span class="step-number">05</span>
+                    <span>Review</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FORM AND LIVE PROFILE -->
+        <section class="content-layout">
+
+
+            <!-- LEFT FORM -->
+            <div class="form-card">
+
+                <form id="onboardingForm" novalidate>
+
+
+                    <!-- STEP 1: IDENTITY -->
+                    <div class="form-step active" data-step="1">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">01 / PERSONAL DETAILS</span>
+
+                            <h2>Who are you?</h2>
+
+                            <p>
+                                Let's get to know the person behind
+                                the ideas.
+                            </p>
+
+                        </div>
+
+
+                        <!-- PROFILE PHOTO -->
+                        <div class="photo-upload">
+
+                            <div class="photo-circle" id="photoPreview">
+                                <span>+</span>
+                            </div>
+
+                            <div class="photo-info">
+
+                                <label for="profilePhoto">
+                                    Add your profile photo
+                                </label>
+
+                                <p>
+                                    A clear photo helps the community
+                                    recognise you.
+                                </p>
+
+                                <input
+                                    type="file"
+                                    id="profilePhoto"
+                                    accept="image/png,image/jpeg"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="founderName">
+                                Full Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="founderName"
+                                placeholder="Enter your full name"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="founderEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="founderEmail"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="location">
+                                Location <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="location"
+                                placeholder="Example: New Delhi, India"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="introduction">
+                                Introduce Yourself <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="introduction"
+                                rows="4"
+                                maxlength="250"
+                                placeholder="Write a few lines about yourself, your interests and what motivates you..."
+                            ></textarea>
+
+                            <div class="character-count">
+                                Maximum 250 characters
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 2: BACKGROUND -->
+                    <div class="form-step" data-step="2">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">02 / YOUR BACKGROUND</span>
+
+                            <h2>What's your story?</h2>
+
+                            <p>
+                                Your education and experience are
+                                part of your journey.
+                            </p>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="college">
+                                College / University <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="college"
+                                placeholder="Enter your institution name"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="degree">
+                                Degree / Qualification <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="degree"
+                                placeholder="Example: B.Tech in Computer Science"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="graduationYear">
+                                Graduation Year <span>*</span>
+                            </label>
+
+                            <select id="graduationYear">
+
+                                <option value="">Choose graduation year</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="experience">
+                                Professional Experience
+                            </label>
+
+                            <select id="experience">
+
+                                <option value="">Choose your experience</option>
+                                <option>No professional experience yet</option>
+                                <option>Academic / Personal Projects</option>
+                                <option>Internship Experience</option>
+                                <option>1–2 Years</option>
+                                <option>3+ Years</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="information-note">
+                            Your experience does not have to be
+                            professional. Student projects and
+                            personal learning count too.
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 3: SKILLS -->
+                    <div class="form-step" data-step="3">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">03 / YOUR CAPABILITIES</span>
+
+                            <h2>What do you bring?</h2>
+
+                            <p>
+                                Select the skills that represent
+                                your current abilities.
+                            </p>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Technical Skills <span>*</span>
+                            </label>
+
+                            <p class="field-hint">
+                                Select all that apply.
+                            </p>
+
+                            <div class="skill-grid">
+
+                                <button type="button" class="skill-option">
+                                    HTML
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    CSS
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    JavaScript
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Python
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Java
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    C++
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    React
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Machine Learning
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    UI / UX Design
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Database Management
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Business Skills
+                            </label>
+
+                            <div class="skill-grid">
+
+                                <button type="button" class="skill-option">
+                                    Leadership
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Marketing
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Communication
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Research
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Business Strategy
+                                </button>
+
+                                <button type="button" class="skill-option">
+                                    Problem Solving
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="interests">
+                                Primary Area of Interest
+                            </label>
+
+                            <select id="interests">
+
+                                <option value="">Choose your interest</option>
+                                <option>Artificial Intelligence</option>
+                                <option>Web Development</option>
+                                <option>FinTech</option>
+                                <option>Healthcare</option>
+                                <option>Education</option>
+                                <option>E-commerce</option>
+                                <option>Social Impact</option>
+                                <option>Cybersecurity</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 4: AMBITION -->
+                    <div class="form-step" data-step="4">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">04 / YOUR AMBITION</span>
+
+                            <h2>What are you building?</h2>
+
+                            <p>
+                                Every big venture starts somewhere.
+                                Tell us where you stand.
+                            </p>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="startupName">
+                                Startup / Idea Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="startupName"
+                                placeholder="Give your idea a name"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="industry">
+                                Industry <span>*</span>
+                            </label>
+
+                            <select id="industry">
+
+                                <option value="">Choose an industry</option>
+                                <option>Technology</option>
+                                <option>Artificial Intelligence</option>
+                                <option>Healthcare</option>
+                                <option>Education</option>
+                                <option>Finance</option>
+                                <option>E-commerce</option>
+                                <option>Agriculture</option>
+                                <option>Entertainment</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>
+                                Current Development Stage <span>*</span>
+                            </label>
+
+                            <div class="stage-grid">
+
+                                <button type="button" class="stage-option" data-value="Idea">
+                                    <strong>01</strong>
+                                    <span>Idea</span>
+                                    <small>Just getting started</small>
+                                </button>
+
+                                <button type="button" class="stage-option" data-value="Research">
+                                    <strong>02</strong>
+                                    <span>Research</span>
+                                    <small>Exploring possibilities</small>
+                                </button>
+
+                                <button type="button" class="stage-option" data-value="Validation">
+                                    <strong>03</strong>
+                                    <span>Validation</span>
+                                    <small>Testing the concept</small>
+                                </button>
+
+                                <button type="button" class="stage-option" data-value="Prototype">
+                                    <strong>04</strong>
+                                    <span>Prototype</span>
+                                    <small>Building the first version</small>
+                                </button>
+
+                                <button type="button" class="stage-option" data-value="MVP">
+                                    <strong>05</strong>
+                                    <span>MVP</span>
+                                    <small>Creating a usable product</small>
+                                </button>
+
+                                <button type="button" class="stage-option" data-value="Launched">
+                                    <strong>06</strong>
+                                    <span>Launched</span>
+                                    <small>Already in the market</small>
+                                </button>
+
+                            </div>
+
+                            <input type="hidden" id="startupStage">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="ideaDescription">
+                                Describe Your Idea
+                            </label>
+
+                            <textarea
+                                id="ideaDescription"
+                                rows="4"
+                                placeholder="What problem are you trying to solve?"
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 5: REVIEW -->
+                    <div class="form-step" data-step="5">
+
+                        <div class="section-heading">
+
+                            <span class="section-number">05 / FINAL REVIEW</span>
+
+                            <h2>Your story, together.</h2>
+
+                            <p>
+                                Take a final look at your information
+                                before joining ECHO.
+                            </p>
+
+                        </div>
+
+
+                        <div class="review-container" id="reviewContent">
+                        </div>
+
+
+                        <div class="privacy-note">
+
+                            <span class="privacy-icon">✓</span>
+
+                            <div>
+                                <strong>Your ideas stay yours.</strong>
+
+                                <p>
+                                    Completing your founder profile does
+                                    not publish your ideas. You decide
+                                    when to share them with investors.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ERROR -->
+                    <p id="formError" class="form-error"></p>
+
+
+                    <!-- BUTTON AREA -->
+                    <div class="button-area">
+
+                        <button
+                            type="button"
+                            id="previousButton"
+                            class="btn-previous"
+                        >
+                            <span>←</span> Previous
+                        </button>
+
+                        <button
+                            type="button"
+                            id="nextButton"
+                            class="btn-primary"
+                        >
+                            Continue <span>→</span>
+                        </button>
+
+                        <button
+                            type="submit"
+                            id="completeButton"
+                            class="btn-primary"
+                            style="display: none;"
+                        >
+                            Complete My Profile <span>→</span>
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="saveButton"
+                        class="save-progress"
+                    >
+                        Save progress for later
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- RIGHT LIVE IDENTITY CARD -->
+            <aside class="preview-panel">
+
+                <div class="preview-header">
+
+                    <div>
+                        <span class="preview-eyebrow">YOUR PERSONAL SPACE</span>
+                        <h3>Founder Identity</h3>
+                    </div>
+
+                    <span class="live-status">
+                        <i></i> LIVE PREVIEW
+                    </span>
+
+                </div>
+
+
+                <div class="founder-card">
+
+                    <div class="founder-card-header">
+
+                        <span class="card-logo">ECHO<span>.</span></span>
+
+                        <span class="card-type">FOUNDER PROFILE</span>
+
+                    </div>
+
+
+                    <div class="founder-photo" id="cardPhoto">
+
+                        <span id="cardInitial">?</span>
+
+                    </div>
+
+
+                    <h2 id="cardName">Your Name</h2>
+
+                    <p class="founder-location" id="cardLocation">
+                        <span>⌖</span> Your location
+                    </p>
+
+
+                    <div class="card-separator"></div>
+
+
+                    <div class="preview-block">
+
+                        <span class="preview-label">THE PERSON BEHIND THE IDEA</span>
+
+                        <p id="cardIntroduction">
+                            Your introduction will appear here.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-separator"></div>
+
+
+                    <div class="preview-block">
+
+                        <span class="preview-label">SKILLS & EXPERTISE</span>
+
+                        <div id="cardSkills" class="card-skills">
+
+                            <span class="empty-skill">
+                                Your skills will appear here
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-separator"></div>
+
+
+                    <div class="preview-block">
+
+                        <span class="preview-label">CURRENT VENTURE</span>
+
+                        <h3 id="cardStartup">Your next big idea</h3>
+
+                        <p id="cardIndustry">Industry not selected</p>
+
+                    </div>
+
+
+                    <div class="card-stage">
+
+                        <span>DEVELOPMENT STAGE</span>
+
+                        <strong id="cardStage">Not selected</strong>
+
+                    </div>
+
+
+                    <div class="founder-card-footer">
+
+                        <span>BUILT ON IDEAS.</span>
+
+                        <span>POWERED BY PEOPLE.</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="preview-footer">
+
+                    <span class="preview-footer-icon">✦</span>
+
+                    <p>
+                        Your founder identity grows with every
+                        detail you share.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- BOTTOM FOOTER -->
+        <footer class="page-footer">
+
+            <span>© 2026 ECHO.</span>
+
+            <span>IDEAS MEET OPPORTUNITY</span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="innovator-onboarding.js"></script>
+
+</body>
+
+</html>

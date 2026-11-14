@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHO | Investor Workspace</title>
+    <link rel="stylesheet" href="investor-dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div>
+                <a class="brand" href="investor-dashboard.html">ECHO<span>.</span></a>
+                <p class="portal-name">INVESTOR WORKSPACE</p>
+
+                <nav class="sidebar-nav">
+
+                    <p class="nav-caption">WORKSPACE</p>
+
+                    <button class="nav-link active" data-page="dashboard">
+                        Overview
+                    </button>
+
+                    <button class="nav-link" data-page="explore">
+                        Explore projects
+                    </button>
+
+                    <button class="nav-link" data-page="featured">
+                        Featured ideas
+                    </button>
+
+                    <p class="nav-caption second-caption">YOUR ACTIVITY</p>
+
+                    <button class="nav-link" data-page="interests">
+                        My interests
+                    </button>
+
+                    <button class="nav-link" data-page="notifications">
+                        Notifications
+                    </button>
+
+                    <button class="nav-link" data-page="profile">
+                        Investor profile
+                    </button>
+
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <p class="sidebar-note">
+                    Good ideas deserve<br>
+                    the right opportunity.
+                </p>
+
+                <button id="logoutBtn" class="logout-btn">
+                    Log out
+                </button>
+
+                <p class="sidebar-copy">© 2026 ECHO</p>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">YOUR INVESTOR SPACE</p>
+                    <h1 id="welcomeHeading">Welcome</h1>
+                </div>
+
+                <div class="account-mark" id="userInitial">R</div>
+
+            </header>
+
+
+            <!-- DASHBOARD PAGE -->
+            <section id="dashboard" class="page active-page">
+
+                <div class="welcome-box">
+
+                    <div class="welcome-copy">
+
+                        <p class="eyebrow">A PLACE FOR WHAT'S NEXT</p>
+
+                        <h1>
+                            Find the ideas<br>
+                            worth moving forward.
+                        </h1>
+
+                        <p class="welcome-description">
+                            Explore thoughtful projects, meet the people behind them
+                            and find opportunities that match your interests.
+                        </p>
+
+                        <button class="primary-btn" data-go="explore">
+                            Explore projects <span>→</span>
+                        </button>
+
+                    </div>
+
+                    <div class="welcome-side">
+
+                        <p class="welcome-side-label">
+                            THE ECHO POINT OF VIEW
+                        </p>
+
+                        <p class="welcome-quote">
+                            "The best opportunities begin with a conversation."
+                        </p>
+
+                        <div class="welcome-rule"></div>
+
+                        <p class="welcome-side-small">
+                            Discover. Connect. Build.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OVERVIEW -->
+                <div class="section-heading">
+
+                    <div>
+                        <p class="eyebrow">AT A GLANCE</p>
+                        <h2>Your overview</h2>
+                    </div>
+
+                    <p class="section-aside">
+                        A quick look at your activity on ECHO.
+                    </p>
+
+                </div>
+
+
+                <div class="stats">
+
+                    <div class="stat-card">
+                        <p>Projects to explore</p>
+                        <h2 id="projectCount">0</h2>
+                        <span>Across different categories</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <p>Saved interests</p>
+                        <h2 id="interestCount">0</h2>
+                        <span>Ideas you've bookmarked</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <p>Unread updates</p>
+                        <h2 id="notificationCount">0</h2>
+                        <span>Activity and announcements</span>
+                    </div>
+
+                </div>
+
+
+                <!-- RECENT PROJECTS -->
+                <div class="section-heading recent-heading">
+
+                    <div>
+                        <p class="eyebrow">FRESH FROM THE COMMUNITY</p>
+                        <h2>Recently added ideas</h2>
+                    </div>
+
+                    <button class="text-link" data-go="explore">
+                        View all projects <span>→</span>
+                    </button>
+
+                </div>
+
+                <div id="dashboardProjects" class="project-grid"></div>
+
+            </section>
+
+
+            <!-- EXPLORE PROJECTS -->
+            <section id="explore" class="page">
+
+                <div class="page-intro">
+                    <p class="eyebrow">DISCOVER</p>
+                    <h1>Explore projects</h1>
+
+                    <p class="description">
+                        Good ideas come from everywhere. Find the ones that speak to you.
+                    </p>
+                </div>
+
+                <div class="search-wrap">
+
+                    <label for="searchInput">Find a project</label>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by project name or category..."
+                    >
+
+                </div>
+
+                <div id="allProjects" class="project-grid"></div>
+
+            </section>
+
+
+            <!-- FEATURED IDEAS -->
+            <section id="featured" class="page">
+
+                <div class="page-intro">
+                    <p class="eyebrow">SELECTED FOR YOU</p>
+                    <h1>Featured ideas</h1>
+
+                    <p class="description">
+                        A closer look at projects with interesting potential.
+                    </p>
+                </div>
+
+                <div id="featuredProjects" class="project-grid"></div>
+
+            </section>
+
+
+            <!-- MY INTERESTS -->
+            <section id="interests" class="page">
+
+                <div class="page-intro">
+                    <p class="eyebrow">YOUR SHORTLIST</p>
+                    <h1>My interests</h1>
+
+                    <p class="description">
+                        The projects you've saved to revisit or explore further.
+                    </p>
+                </div>
+
+                <div id="savedProjects" class="project-grid"></div>
+
+            </section>
+
+
+            <!-- NOTIFICATIONS -->
+            <section id="notifications" class="page">
+
+                <div class="page-intro">
+                    <p class="eyebrow">WHAT'S HAPPENING</p>
+                    <h1>Notifications</h1>
+
+                    <p class="description">
+                        Updates and activity from your ECHO workspace.
+                    </p>
+                </div>
+
+                <div id="notificationList"></div>
+
+            </section>
+
+
+            <!-- INVESTOR PROFILE -->
+            <section id="profile" class="page">
+
+                <div class="page-intro">
+                    <p class="eyebrow">YOUR DETAILS</p>
+                    <h1>Investor profile</h1>
+
+                    <p class="description">
+                        Tell innovators a little about your interests and what you look for.
+                    </p>
+                </div>
+
+
+                <form id="profileForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="investorName">Full name</label>
+
+                            <input
+                                type="text"
+                                id="investorName"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="investorEmail">Email address</label>
+
+                            <input
+                                type="email"
+                                id="investorEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-field full-field">
+                            <label for="investorInterest">Investment interests</label>
+
+                            <input
+                                type="text"
+                                id="investorInterest"
+                                placeholder="Example: Technology, Healthcare"
+                            >
+                        </div>
+
+
+                        <div class="form-field full-field">
+                            <label for="investorAbout">About you</label>
+
+                            <textarea
+                                id="investorAbout"
+                                placeholder="Share a little about your background and the ideas you like to support."
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" class="primary-btn">
+                        Save profile <span>→</span>
+                    </button>
+
+                    <p id="profileMessage" class="form-message"></p>
+
+                </form>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="main-footer">
+                <span>ECHO — Human ideas. Real opportunities.</span>
+                <span>Investor workspace</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="investor-dashboard.js"></script>
+
+</body>
+</html>

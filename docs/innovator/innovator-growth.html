@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth & AI Assistant | ECHO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="innovator-growth.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-name">ECHO<span>.</span></span>
+        <small>IDEAS MEET OPPORTUNITY</small>
+    </a>
+
+    <div class="nav-group">
+        <p class="nav-heading">WORKSPACE</p>
+        <a href="innovator-dashboard.html" class="nav-link">Overview</a>
+        <a href="innovator-workspace.html" class="nav-link">My Workspace</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">OPPORTUNITIES</p>
+        <a href="innovator-network.html" class="nav-link">Find Investors</a>
+        <a href="innovator-network.html#connections" class="nav-link">Connections & Messages</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">COMMUNITY & GROWTH</p>
+        <a href="innovator-community.html" class="nav-link">ECHO Commons</a>
+        <a href="innovator-growth.html" class="nav-link active">Growth & AI Assistant</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">ACCOUNT</p>
+        <a href="innovator-settings.html" class="nav-link">My Profile & Settings</a>
+    </div>
+
+    <div class="sidebar-bottom">
+
+        <button class="logout-btn" id="logoutBtn">
+            <span>↪</span> Logout
+        </button>
+
+        <div class="sidebar-tagline">
+            Built on ideas.<br>
+            Powered by people.
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="top-label">YOUR PROGRESS, YOUR JOURNEY</p>
+                <h2>Growth & Development</h2>
+            </div>
+
+            <div class="growth-user-header">
+
+    <div class="topbar-user">
+    <div class="user-avatar" id="userAvatar">R</div>
+
+    <div class="user-details">
+        <strong id="userName">Ritika Chawla</strong>
+        <small>Innovator Account</small>
+    </div>
+</div>
+
+</div>
+
+
+        </header>
+
+
+        <!-- INTRO -->
+        <section class="welcome-section">
+            <div>
+                <p class="section-label">KEEP MOVING FORWARD</p>
+                <h1>Great ideas deserve <em>great growth.</em></h1>
+                <p>
+                    Track your startup journey, set meaningful goals
+                    and take the next step towards making your idea real.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- STATS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Projects</p>
+                <h2 id="totalProjects">0</h2>
+                <span>Your ideas in ECHO</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Active Goals</p>
+                <h2 id="totalGoals">0</h2>
+                <span>Goals you are working on</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed Goals</p>
+                <h2 id="completedGoals">0</h2>
+                <span>Milestones achieved</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Overall Progress</p>
+                <h2 id="overallProgress">0%</h2>
+                <span>Your goal completion rate</span>
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT GROWTH -->
+        <section class="content-card project-growth">
+
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">STARTUP DEVELOPMENT</p>
+                    <h2>Your Project Journey</h2>
+                    <p class="section-description">
+                        Follow the progress of your ideas and projects.
+                    </p>
+                </div>
+            </div>
+
+            <div id="projectList" class="project-list">
+                <div class="empty-state">
+                    <h3>No projects found</h3>
+                    <p>Create your first idea in My Workspace to start tracking growth.</p>
+                    <a href="innovator-workspace.html" class="primary-btn">
+                        Create an Idea
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    
+<!-- AI IDEA ANALYSIS -->
+
+<section class="content-card idea-intelligence">
+
+    <div class="section-heading">
+        <div>
+            <p class="section-label">POWERED BY GEMINI AI</p>
+            <h2>ECHO Idea Intelligence</h2>
+            <p class="section-description">
+                Understand your idea, discover its potential
+                and identify what needs improvement.
+            </p>
+        </div>
+    </div>
+
+    <div class="idea-analysis-controls">
+
+        <div class="form-group">
+            <label for="analysisIdeaSelect">Choose an Idea</label>
+            <select id="analysisIdeaSelect" required>
+                <option value="">Select a project to analyze</option>
+            </select>
+        </div>
+
+        <button type="button" id="analyzeIdeaBtn" class="primary-btn">
+            Analyze with ECHO AI ↗
+        </button>
+
+    </div>
+
+    <p id="analysisStatus" class="analysis-status"></p>
+
+    <div id="ideaAnalysisResult" class="idea-analysis-result">
+
+        <div class="empty-state">
+            <h3>Your next breakthrough starts with insight.</h3>
+            <p>
+                Select one of your projects and let ECHO AI
+                assess its strengths, weaknesses and opportunities.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- GOALS -->
+        <section class="content-card goals-section">
+
+            <div class="section-heading goal-heading">
+                <div>
+                    <p class="section-label">PLAN YOUR NEXT MOVE</p>
+                    <h2>Growth Goals</h2>
+                    <p class="section-description">
+                        Small steps today can create big results tomorrow.
+                    </p>
+                </div>
+            </div>
+
+            <form id="goalForm" class="goal-form">
+
+                <div class="form-group">
+                    <label for="goalTitle">Goal Title</label>
+                    <input
+                        type="text"
+                        id="goalTitle"
+                        placeholder="Example: Complete my business model"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="goalProject">Related Project</label>
+                    <select id="goalProject">
+                        <option value="">General Growth Goal</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    + Add Goal
+                </button>
+
+            </form>
+
+            <div id="goalList" class="goal-list">
+                <p class="empty-message">Your goals will appear here.</p>
+            </div>
+
+        </section>
+
+
+        <!-- AI ASSISTANT -->
+        <section class="assistant-section">
+
+            <div class="assistant-intro">
+                <p class="section-label">YOUR THINKING PARTNER</p>
+                <h2>Meet the ECHO <em>Assistant.</em></h2>
+
+                <p>
+                    Have a question about your startup? Get suggestions,
+                    planning ideas and guidance for your next step.
+                </p>
+
+                <span class="demo-label">DEMO VERSION · RULE-BASED</span>
+            </div>
+
+            <div class="assistant-box">
+
+                <div class="assistant-header">
+                    <div class="assistant-icon">E</div>
+                    <div>
+                        <h3>ECHO Assistant</h3>
+                        <p>Your startup guidance companion</p>
+                    </div>
+                    <span class="online-dot"></span>
+                </div>
+
+                <div class="chat-area" id="chatArea">
+
+                    <div class="assistant-message">
+                        Hello! Welcome to ECHO.
+
+                        Tell me about your startup idea or the
+                        challenge you are facing. I'll help you
+                        think about your next step.
+                    </div>
+
+                </div>
+
+                <form id="assistantForm" class="chat-form">
+
+                    <input
+                        type="text"
+                        id="assistantInput"
+                        placeholder="Ask something about your startup..."
+                        required
+                    >
+
+                    <button type="submit">Send ↗</button>
+
+                </form>
+
+                <div class="suggestion-list">
+                    <button class="suggestion-btn" data-question="How can I validate my startup idea?">
+                        Validate my idea
+                    </button>
+
+                    <button class="suggestion-btn" data-question="How can I find investors?">
+                        Find investors
+                    </button>
+
+                    <button class="suggestion-btn" data-question="How can I grow my startup?">
+                        Grow my startup
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+            <h3>ECHO<span>.</span></h3>
+            <p>Built on ideas. Powered by people.</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="innovator-growth.js"></script>
+
+</body>
+</html>

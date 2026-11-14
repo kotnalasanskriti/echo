@@ -1,0 +1,1172 @@
+
+/* =========================================
+   ECHO - FOUNDER JOURNEY
+   PREMIUM DESIGN SYSTEM
+========================================= */
+
+
+/* 1. GLOBAL SETTINGS */
+
+:root {
+    --asphalt: #110805;
+    --mountain: #EAE2D7;
+    --ivory: #F6F1E9;
+    --brown: #766B60;
+    --accent: #8C7867;
+    --white: #FFFFFF;
+    --border: #E5DDD3;
+    --soft: #F8F5F0;
+    --green: #527B5D;
+    --red: #B54747;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--ivory);
+    color: var(--asphalt);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+
+/* 2. NAVBAR */
+
+.navbar {
+    min-height: 82px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(246, 241, 233, 0.96);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 2px;
+}
+
+.logo-name {
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1;
+    color: var(--asphalt);
+}
+
+.logo-name span {
+    color: var(--accent);
+}
+
+.logo-tagline {
+    color: var(--brown);
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.journey-label {
+    color: var(--brown);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logout-link {
+    color: var(--asphalt);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 17px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.logout-link:hover {
+    background: var(--asphalt);
+    color: var(--ivory);
+    border-color: var(--asphalt);
+}
+
+
+/* 3. MAIN CONTAINER */
+
+.main-container {
+    max-width: 1450px;
+    width: 86%;
+    margin: auto;
+}
+
+
+/* 4. INTRODUCTION */
+
+.intro-section {
+    padding: 65px 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.eyebrow {
+    display: block;
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.intro-text h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 5vw, 66px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 19px;
+}
+
+.intro-text h1 span {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.intro-text > p {
+    max-width: 530px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--brown);
+}
+
+.intro-decoration {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.decoration-line {
+    width: 70px;
+    height: 1px;
+    background: var(--accent);
+}
+
+
+/* 5. PROGRESS SECTION */
+
+.progress-section {
+    padding: 25px 0 35px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 35px;
+}
+
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.progress-top span:last-child {
+    color: var(--accent);
+}
+
+.progress-track {
+    width: 100%;
+    height: 5px;
+    background: var(--mountain);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 20%;
+    height: 100%;
+    background: var(--asphalt);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.step-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #A89D91;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.step-item.active {
+    color: var(--asphalt);
+    font-weight: 700;
+}
+
+.step-item.active .step-number {
+    background: var(--asphalt);
+    border-color: var(--asphalt);
+    color: var(--ivory);
+}
+
+.step-item.completed {
+    color: var(--green);
+}
+
+.step-item.completed .step-number {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+}
+
+
+/* 6. MAIN CONTENT LAYOUT */
+
+.content-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    gap: 35px;
+    align-items: start;
+    padding-bottom: 65px;
+}
+
+
+/* 7. FORM CARD */
+
+.form-card {
+    background: var(--white);
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(17, 8, 5, 0.035);
+    min-width: 0;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: slideIn 0.35s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 8. FORM HEADINGS */
+
+.section-heading {
+    margin-bottom: 34px;
+}
+
+.section-number {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: -0.6px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: var(--brown);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* 9. PHOTO UPLOAD */
+
+.photo-upload {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 28px;
+}
+
+.photo-circle {
+    width: 82px;
+    height: 82px;
+    min-width: 82px;
+    border-radius: 50%;
+    background: var(--mountain);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 1px var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 32px;
+    overflow: hidden;
+}
+
+.photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-info label {
+    display: block;
+    color: var(--asphalt);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.photo-info p {
+    color: var(--brown);
+    font-size: 11px;
+    margin: 5px 0 9px;
+}
+
+.photo-info input {
+    max-width: 100%;
+    font-size: 10px;
+    color: var(--brown);
+}
+
+
+/* 10. INPUT FIELDS */
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group > label {
+    display: block;
+    color: var(--asphalt);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.input-group > label span {
+    color: var(--accent);
+}
+
+.input-group input:not([type="file"]),
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #DDD4CA;
+    border-radius: 6px;
+    outline: none;
+    background: #FFFEFC;
+    color: var(--asphalt);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    transition: 0.25s;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #A99F95;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--accent);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(140, 120, 103, 0.10);
+}
+
+.input-group input[readonly] {
+    background: var(--soft);
+    color: var(--brown);
+    cursor: not-allowed;
+}
+
+.input-group textarea {
+    resize: vertical;
+    line-height: 1.7;
+    min-height: 105px;
+}
+
+.input-group select {
+    cursor: pointer;
+}
+
+.character-count {
+    color: #A99F95;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 6px;
+}
+
+.field-hint {
+    color: var(--brown);
+    font-size: 11px;
+    margin: -3px 0 14px;
+}
+
+
+/* 11. INFORMATION NOTE */
+
+.information-note {
+    padding: 15px 18px;
+    background: var(--soft);
+    border-left: 3px solid var(--accent);
+    color: var(--brown);
+    font-size: 12px;
+    line-height: 1.7;
+    border-radius: 3px;
+}
+
+
+/* 12. SKILL BUTTONS */
+
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-option {
+    padding: 11px 16px;
+    background: var(--soft);
+    color: var(--brown);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.skill-option:hover {
+    background: var(--mountain);
+    border-color: var(--accent);
+    color: var(--asphalt);
+    transform: translateY(-2px);
+}
+
+.skill-option.selected {
+    background: var(--asphalt);
+    border-color: var(--asphalt);
+    color: var(--ivory);
+    box-shadow: 0 4px 12px rgba(17, 8, 5, 0.12);
+}
+
+
+/* 13. STARTUP STAGE BUTTONS */
+
+.stage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.stage-option {
+    min-height: 105px;
+    padding: 15px;
+    text-align: left;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.stage-option strong {
+    display: block;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.stage-option span {
+    display: block;
+    color: var(--asphalt);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stage-option small {
+    display: block;
+    color: var(--brown);
+    font-size: 10px;
+}
+
+.stage-option:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.stage-option.selected {
+    background: var(--asphalt);
+    border-color: var(--asphalt);
+}
+
+.stage-option.selected strong,
+.stage-option.selected small {
+    color: #C9B9A8;
+}
+
+.stage-option.selected span {
+    color: var(--white);
+}
+
+
+/* 14. BUTTON AREA */
+
+.button-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-top: 25px;
+    margin-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.btn-primary,
+.btn-previous {
+    min-height: 50px;
+    padding: 0 23px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    min-width: 175px;
+    background: var(--asphalt);
+    color: var(--ivory);
+    border: 1px solid var(--asphalt);
+    box-shadow: 0 5px 14px rgba(17, 8, 5, 0.12);
+}
+
+.btn-primary span {
+    font-size: 17px;
+    transition: transform 0.25s;
+}
+
+.btn-primary:hover {
+    background: #493C34;
+    border-color: #493C34;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(17, 8, 5, 0.18);
+}
+
+.btn-primary:hover span {
+    transform: translateX(4px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-previous {
+    min-width: 120px;
+    background: var(--white);
+    color: var(--asphalt);
+    border: 1px solid var(--border);
+}
+
+.btn-previous:hover {
+    background: var(--mountain);
+    border-color: var(--accent);
+}
+
+.save-progress {
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.save-progress:hover {
+    color: var(--asphalt);
+    text-decoration: underline;
+}
+
+
+/* 15. ERROR MESSAGE */
+
+.form-error {
+    min-height: 17px;
+    margin-top: 15px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* 16. LIVE PREVIEW PANEL */
+
+.preview-panel {
+    position: sticky;
+    top: 25px;
+    min-width: 0;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.preview-eyebrow {
+    display: block;
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.preview-header h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.live-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.live-status i {
+    width: 7px;
+    height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(82, 123, 93, 0.12);
+}
+
+
+/* 17. FOUNDER CARD */
+
+.founder-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--asphalt);
+    color: var(--ivory);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 18px 45px rgba(17, 8, 5, 0.16);
+}
+
+.founder-card::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -90px;
+    width: 230px;
+    height: 230px;
+    border: 1px solid rgba(234, 226, 215, 0.10);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.founder-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 38px;
+}
+
+.card-logo {
+    color: var(--ivory);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.card-logo span {
+    color: #B9A18A;
+}
+
+.card-type {
+    color: #B9AA9A;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* FOUNDER IMAGE */
+
+.founder-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #493C34;
+    border: 3px solid #766B60;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--ivory);
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.founder-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-card > h2 {
+    position: relative;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.founder-location {
+    color: #B9AA9A;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.founder-location span {
+    color: #C4A98F;
+    margin-right: 4px;
+}
+
+.card-separator {
+    height: 1px;
+    background: rgba(234, 226, 215, 0.16);
+    margin: 24px 0;
+}
+
+
+/* CARD CONTENT */
+
+.preview-block {
+    position: relative;
+}
+
+.preview-label {
+    display: block;
+    color: #B9AA9A;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+}
+
+.preview-block > p {
+    color: #EAE2D7;
+    font-size: 12px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card-skills span {
+    padding: 7px 11px;
+    border: 1px solid rgba(234, 226, 215, 0.2);
+    background: #29201C;
+    color: var(--ivory);
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.card-skills .empty-skill {
+    color: #B9AA9A;
+}
+
+.preview-block > h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+    margin-bottom: 5px;
+}
+
+.preview-block > h3 + p {
+    color: #B9AA9A;
+    font-size: 11px;
+}
+
+
+/* CARD STAGE */
+
+.card-stage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 13px 14px;
+    background: #29201C;
+    border-radius: 5px;
+}
+
+.card-stage span {
+    color: #B9AA9A;
+    font-size: 8px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.card-stage strong {
+    color: #EAE2D7;
+    font-size: 11px;
+    text-align: right;
+}
+
+.founder-card-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(234, 226, 215, 0.16);
+    color: #B9AA9A;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+
+/* PREVIEW FOOTER */
+
+.preview-footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 17px 5px;
+}
+
+.preview-footer-icon {
+    color: var(--accent);
+    font-size: 19px;
+}
+
+.preview-footer p {
+    color: var(--brown);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* 18. REVIEW SECTION */
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.review-item {
+    padding: 16px;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    min-width: 0;
+}
+
+.review-item span {
+    display: block;
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.review-item p {
+    color: var(--asphalt);
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.privacy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px;
+    margin-top: 22px;
+    background: #F2F5EF;
+    border: 1px solid #DCE6D8;
+    border-radius: 7px;
+}
+
+.privacy-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 24px;
+    height: 24px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.privacy-note strong {
+    display: block;
+    color: #315D3B;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.privacy-note p {
+    color: #57735D;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* 19. FOOTER */
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 0;
+    border-top: 1px solid var(--border);
+    color: var(--brown);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* 20. RESPONSIVE DESIGN */
+
+@media (max-width: 1050px) {
+
+    .main-container {
+        width: 90%;
+    }
+
+    .content-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(270px, 0.85fr);
+        gap: 22px;
+    }
+
+    .form-card {
+        padding: 28px;
+    }
+
+    .founder-card {
+        padding: 23px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-panel {
+        position: static;
+        max-width: 550px;
+    }
+
+    .intro-decoration {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 15px 5%;
+        min-height: 72px;
+    }
+
+    .journey-label {
+        display: none;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .main-container {
+        width: 92%;
+    }
+
+    .intro-section {
+        padding: 45px 0 30px;
+    }
+
+    .intro-text h1 {
+        font-size: 43px;
+    }
+
+    .intro-text > p {
+        font-size: 12px;
+    }
+
+    .step-navigation {
+        gap: 5px;
+    }
+
+    .step-item {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 9px;
+    }
+
+    .step-number {
+        width: 27px;
+        height: 27px;
+    }
+
+    .form-card {
+        padding: 21px;
+        border-radius: 9px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .photo-upload {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .photo-circle {
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+    }
+
+    .stage-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .button-area {
+        flex-wrap: wrap;
+    }
+
+    .btn-primary {
+        min-width: 0;
+        flex: 1;
+        padding: 0 13px;
+    }
+
+    .btn-previous {
+        min-width: 100px;
+        padding: 0 13px;
+    }
+
+    .review-container {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-card {
+        padding: 23px;
+    }
+
+    .page-footer {
+        gap: 12px;
+        font-size: 8px;
+    }
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password | ECHO</title>
+    <link rel="stylesheet" href="investor-auth.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="index.html" class="logo">ECHO<span>.</span></a>
+        <a href="investor-login.html" class="top-link">Back to sign in</a>
+    </header>
+
+    <main class="auth-layout">
+
+        <section class="intro-panel">
+            <p class="eyebrow">A FRESH START</p>
+
+            <h1>Let's get you back to where ideas happen.</h1>
+
+            <p class="intro-text">
+                It happens. Enter your registered email address
+                to begin the password recovery process.
+            </p>
+
+            <p class="intro-note">Your next opportunity is waiting.</p>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-content">
+
+                <p class="eyebrow">ACCOUNT RECOVERY</p>
+                <h2>Forgot your password?</h2>
+
+                <p class="form-description">
+                    Enter the email address associated with your ECHO account.
+                </p>
+
+                <form id="forgotForm">
+
+                    <label for="forgotEmail">Email address</label>
+                    <input
+                        type="email"
+                        id="forgotEmail"
+                        placeholder="Enter your registered email"
+                        required
+                    >
+
+                    <button type="submit" class="main-button">
+                        Continue
+                    </button>
+
+                    <p id="forgotMessage" class="message"></p>
+
+                </form>
+
+                <p class="bottom-text">
+                    Remember your password?
+                    <a href="investor-login.html">Back to login</a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="investor-auth.js"></script>
+</body>
+</html>

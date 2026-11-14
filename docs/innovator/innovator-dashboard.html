@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovator Dashboard | ECHO</title>
+
+    <link rel="stylesheet" href="innovator-dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="index.html" class="brand">
+            <span class="brand-name">ECHO<span>.</span></span>
+            <small>IDEAS MEET OPPORTUNITY</small>
+        </a>
+
+        <div class="nav-group">
+            <p class="nav-heading">WORKSPACE</p>
+            <a href="innovator-dashboard.html" class="nav-link active">Overview</a>
+            <a href="innovator-workspace.html" class="nav-link">My Workspace</a>
+        </div>
+
+        <div class="nav-group">
+            <p class="nav-heading">OPPORTUNITIES</p>
+            <a href="innovator-network.html" class="nav-link">Find Investors</a>
+            <a href="innovator-network.html#connections" class="nav-link">Connections & Messages</a>
+        </div>
+
+        <div class="nav-group">
+            <p class="nav-heading">COMMUNITY & GROWTH</p>
+            <a href="innovator-community.html" class="nav-link">ECHO Commons</a>
+            <a href="innovator-growth.html" class="nav-link">Growth & AI Assistant</a>
+        </div>
+
+        <div class="nav-group">
+            <p class="nav-heading">ACCOUNT</p>
+            <a href="innovator-settings.html" class="nav-link">My Profile & Settings</a>
+           
+        </div>
+
+   <div class="sidebar-bottom">
+
+  
+
+    <div class="sidebar-tagline">
+        Built on ideas.<br>
+        Powered by people.
+    </div>
+
+      <button class="logout-btn" id="logoutBtn">
+        <span>↪</span> Logout
+    </button>
+
+</div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <p class="breadcrumb">ECHO / <span>OVERVIEW</span></p>
+            </div>
+
+            <div class="topbar-right">
+
+                <a href="innovator-settings.html#notifications" class="notification">
+                    ♧
+                </a>
+
+                <div class="user-info">
+                    <div class="avatar" id="userAvatar">I</div>
+                    <span id="userName">Innovator</span>
+                    
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <p class="eyebrow">YOUR INNOVATOR SPACE</p>
+
+                <h1>
+                    Think it. Build it.<br>
+                    Make it <em>real.</em>
+                </h1>
+
+                <p class="welcome-text">
+                    Every big journey begins with a small idea.
+                    This is your space to create, connect and grow.
+                </p>
+
+                <a href="innovator-workspace.html#ignite" class="primary-btn">
+                    Create a New Idea <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="welcome-art">
+                <span class="big-e">E.</span>
+                <span class="art-circle circle-one"></span>
+                <span class="art-circle circle-two"></span>
+            </div>
+
+        </section>
+
+
+        <!-- DATE -->
+        <div class="date-row">
+            <p id="currentDate">Your workspace</p>
+            <p>YOUR JOURNEY STARTS HERE</p>
+        </div>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>TOTAL IDEAS</p>
+                <h2 id="totalIdeas">0</h2>
+                <span>Your ideas in ECHO</span>
+            </div>
+
+            <div class="stat-card">
+                <p>ACTIVE PROJECTS</p>
+                <h2 id="activeProjects">0</h2>
+                <span>Ideas in progress</span>
+            </div>
+
+            <div class="stat-card">
+                <p>CONNECTIONS</p>
+                <h2 id="totalConnections">0</h2>
+                <span>People in your network</span>
+            </div>
+
+            <div class="stat-card">
+                <p>PROFILE STATUS</p>
+                <h2 id="profileStatus">0%</h2>
+                <span>Founder profile completion</span>
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD CONTENT -->
+        <section class="dashboard-grid">
+
+            <!-- MY PROJECTS -->
+            <div class="content-card projects-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="eyebrow">YOUR WORK</p>
+                        <h2>My Projects</h2>
+                    </div>
+
+                    <a href="innovator-workspace.html#projects" class="text-link">
+                        View all →
+                    </a>
+                </div>
+
+                <div id="recentProjects" class="recent-projects">
+
+                    <div class="empty-projects">
+                        <p>No projects created yet.</p>
+                        <a href="innovator-workspace.html#ignite">
+                            Create your first idea →
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLORE ECHO -->
+            <div class="content-card explore-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="eyebrow">DISCOVER MORE</p>
+                        <h2>Explore ECHO</h2>
+                    </div>
+                </div>
+
+                <a href="innovator-network.html" class="explore-item">
+                    <span class="explore-number">01</span>
+                    <span>
+                        <strong>Meet Investors</strong>
+                        <small>Find people who believe in your idea.</small>
+                    </span>
+                    <span class="explore-arrow">↗</span>
+                </a>
+
+                <a href="innovator-community.html" class="explore-item">
+                    <span class="explore-number">02</span>
+                    <span>
+                        <strong>Join the Community</strong>
+                        <small>Share thoughts and learn together.</small>
+                    </span>
+                    <span class="explore-arrow">↗</span>
+                </a>
+
+                <a href="innovator-growth.html#assistant" class="explore-item">
+                    <span class="explore-number">03</span>
+                    <span>
+                        <strong>AI Idea Assistant</strong>
+                        <small>Explore and improve your ideas.</small>
+                    </span>
+                    <span class="explore-arrow">↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEXT STEPS -->
+        <section class="next-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">KEEP MOVING FORWARD</p>
+                    <h2>Your Next Steps</h2>
+                </div>
+            </div>
+
+            <div class="steps-grid">
+
+                <a href="innovator-settings.html#profile" class="step-card">
+                    <span>01</span>
+                    <h3>Complete your profile</h3>
+                    <p>Tell the ECHO community more about yourself.</p>
+                    <small>Update profile →</small>
+                </a>
+
+                <a href="innovator-workspace.html#ignite" class="step-card">
+                    <span>02</span>
+                    <h3>Create your first idea</h3>
+                    <p>Turn your thoughts into a structured project.</p>
+                    <small>Start creating →</small>
+                </a>
+
+                <a href="innovator-network.html" class="step-card">
+                    <span>03</span>
+                    <h3>Build connections</h3>
+                    <p>Meet investors and people who share your vision.</p>
+                    <small>Explore network →</small>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- MANIFESTO -->
+        <section class="manifesto">
+
+            <p class="eyebrow">THE ECHO BELIEF</p>
+
+            <h2>
+                The world doesn't need more noise.<br>
+                It needs ideas worth <em>hearing.</em>
+            </h2>
+
+            <p>Built on ideas. Powered by people.</p>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+            <span>© 2026 ECHO.</span>
+            <span>Ideas meet opportunity.</span>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="innovator-dashboard.js"></script>
+
+</body>
+</html>

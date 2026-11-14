@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ECHO | Innovator Signup</title>
+
+    <link rel="stylesheet" href="innovator-auth.css">
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <!-- LEFT BRAND SECTION -->
+        <section class="brand-section">
+
+            <a href="index.html" class="brand-logo">
+                <span class="brand-name">
+                    ECHO<span class="brand-dot">.</span>
+                </span>
+
+                <span class="brand-tagline">
+                    IDEAS MEET OPPORTUNITY
+                </span>
+            </a>
+
+            <div class="brand-content">
+
+                <p class="small-heading">YOUR JOURNEY STARTS HERE</p>
+
+                <h1>
+                    Every big idea deserves a chance.
+                </h1>
+
+                <p>
+                    Create your innovator account, bring your
+                    ideas together and discover opportunities
+                    to build something meaningful.
+                </p>
+
+            </div>
+
+            <div class="brand-bottom">
+                <span>01 / INNOVATOR</span>
+                <span>BUILT ON IDEAS. POWERED BY PEOPLE.</span>
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIGNUP SECTION -->
+        <section class="form-section">
+
+            <div class="form-wrapper">
+
+            
+
+                <p class="form-label">JOIN THE COMMUNITY</p>
+
+                <h2>Create your account</h2>
+
+                <p class="form-description">
+                    Start your journey with ECHO.
+                </p>
+
+
+                <!-- SIGNUP FORM -->
+                <form id="signupForm">
+
+                    <!-- FULL NAME -->
+                    <div class="form-group">
+
+                        <label for="fullName">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="signupEmail">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="signupPassword">Password</label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="toggleSignupPassword"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Enter password again"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="toggle-password"
+                                id="toggleConfirmPassword"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+                    <div class="terms-group">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label for="terms">
+                            I agree to the Terms and Conditions.
+                        </label>
+
+                    </div>
+
+
+                    <!-- ERROR MESSAGE -->
+                    <p id="signupError" class="error-message"></p>
+
+
+                    <!-- BUTTON -->
+                    <button type="submit" class="auth-button">
+                        Create Account
+                    </button>
+
+                </form>
+
+
+                <!-- LOGIN LINK -->
+                <p class="signup-text">
+                    Already have an account?
+
+                    <a href="innovator-login.html">
+                        Sign in
+                    </a>
+                </p>
+
+
+                
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="innovator-auth.js"></script>
+
+</body>
+</html>

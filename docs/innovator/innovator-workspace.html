@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Workspace | ECHO.</title>
+    <link rel="stylesheet" href="innovator-workspace.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-layout">
+
+    
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <a href="index.html" class="brand">
+        <span class="brand-name">ECHO<span>.</span></span>
+        <small>IDEAS MEET OPPORTUNITY</small>
+    </a>
+
+    <div class="nav-group">
+        <p class="nav-heading">WORKSPACE</p>
+        <a href="innovator-dashboard.html" class="nav-link">Overview</a>
+        <a href="innovator-workspace.html" class="nav-link active">My Workspace</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">OPPORTUNITIES</p>
+        <a href="innovator-network.html" class="nav-link">Find Investors</a>
+        <a href="innovator-network.html#connections" class="nav-link">Connections & Messages</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">COMMUNITY & GROWTH</p>
+        <a href="innovator-community.html" class="nav-link">ECHO Commons</a>
+        <a href="innovator-growth.html" class="nav-link">Growth & AI Assistant</a>
+    </div>
+
+    <div class="nav-group">
+        <p class="nav-heading">ACCOUNT</p>
+        <a href="innovator-settings.html" class="nav-link">My Profile & Settings</a>
+    </div>
+
+    <div class="sidebar-bottom">
+
+        <button class="logout-btn" id="logoutBtn">
+            <span>↪</span> Logout
+        </button>
+
+        <div class="sidebar-tagline">
+            Built on ideas.<br>
+            Powered by people.
+        </div>
+
+    </div>
+
+</aside>
+
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="topbar-label">INNOVATOR / WORKSPACE</p>
+                <h2>My Workspace</h2>
+            </div>
+
+            <div class="topbar-user">
+                <div class="user-avatar" id="userAvatar">I</div>
+                <div>
+                    <strong id="userName">Innovator</strong>
+                    <small>Innovator Account</small>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">YOUR IDEAS. YOUR JOURNEY.</p>
+                <h1>Build something<br><span>worth believing in.</span></h1>
+                <p class="welcome-text">
+                    A space to shape your ideas, manage your projects,
+                    and turn possibilities into progress.
+                </p>
+            </div>
+
+            <a href="#ignite" class="primary-btn">Create New Idea <span>＋</span></a>
+        </section>
+
+
+        <!-- WORKSPACE TABS -->
+        <div class="workspace-tabs">
+            <a href="#ignite" class="tab-link active">Ignite an Idea</a>
+            <a href="#forge" class="tab-link">My Projects</a>
+            <a href="#idea-dna" class="tab-link">Idea DNA</a>
+        </div>
+
+
+        <!-- IGNITE SECTION -->
+        <section class="content-section" id="ignite">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">01 / START SOMETHING</p>
+                    <h2>Ignite your idea.</h2>
+                    <p>Give your idea a shape. You can edit it whenever you want.</p>
+                </div>
+            </div>
+
+            <form id="ideaForm" class="idea-form">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ideaTitle">Idea title *</label>
+                        <input type="text" id="ideaTitle" placeholder="Give your idea a name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ideaCategory">Category *</label>
+                        <select id="ideaCategory" required>
+                            <option value="">Select category</option>
+                            <option>Technology</option>
+                            <option>Education</option>
+                            <option>Healthcare</option>
+                            <option>Finance</option>
+                            <option>Environment</option>
+                            <option>Food & Agriculture</option>
+                            <option>Social Impact</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ideaStage">Current stage *</label>
+                        <select id="ideaStage" required>
+                            <option value="">Select stage</option>
+                            <option>Just an Idea</option>
+                            <option>Research</option>
+                            <option>Prototype</option>
+                            <option>Minimum Viable Product</option>
+                            <option>Early Startup</option>
+                            <option>Growing Business</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ideaFunding">Funding requirement</label>
+                        <input type="text" id="ideaFunding" placeholder="Example: ₹2,00,000">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ideaDescription">Short description *</label>
+                    <textarea id="ideaDescription" rows="3"
+                        placeholder="Explain your idea in a few sentences..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ideaProblem">What problem are you solving? *</label>
+                    <textarea id="ideaProblem" rows="3"
+                        placeholder="Describe the problem you have noticed..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ideaSolution">Your proposed solution *</label>
+                    <textarea id="ideaSolution" rows="3"
+                        placeholder="How will your idea solve this problem?" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ideaAudience">Who will benefit from it?</label>
+                    <input type="text" id="ideaAudience" placeholder="Example: Students, small businesses, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label>Idea visibility</label>
+                    <div class="visibility-options">
+                        <label class="visibility-card">
+                            <input type="radio" name="visibility" value="Private" checked>
+                            <span>
+                                <strong>Private</strong>
+                                <small>Only you can view this idea in this demo.</small>
+                            </span>
+                        </label>
+
+                        <label class="visibility-card">
+                            <input type="radio" name="visibility" value="Public">
+                            <span>
+                                <strong>Public</strong>
+                                <small>Mark this idea as ready to share.</small>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">Save My Idea <span>→</span></button>
+                <p id="formMessage" class="form-message"></p>
+
+            </form>
+        </section>
+
+
+        <!-- FORGE / PROJECTS SECTION -->
+        <section class="content-section" id="forge">
+            <div class="section-heading projects-heading">
+                <div>
+                    <p class="eyebrow">02 / YOUR WORK IN PROGRESS</p>
+                    <h2>Ideas become projects.</h2>
+                    <p>Keep track of everything you are building.</p>
+                </div>
+                <a href="#ignite" class="text-link">＋ Add new idea</a>
+            </div>
+
+            <div class="project-tools">
+                <input type="search" id="projectSearch" placeholder="Search your projects...">
+
+                <select id="categoryFilter">
+                    <option value="All">All categories</option>
+                    <option>Technology</option>
+                    <option>Education</option>
+                    <option>Healthcare</option>
+                    <option>Finance</option>
+                    <option>Environment</option>
+                    <option>Food & Agriculture</option>
+                    <option>Social Impact</option>
+                    <option>Other</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="All">All stages</option>
+                    <option>In Progress</option>
+                    <option>Completed</option>
+                    <option>On Hold</option>
+                </select>
+            </div>
+
+            <div id="projectList" class="project-grid"></div>
+
+            <div id="emptyProjects" class="empty-state">
+                <div class="empty-icon">✳</div>
+                <h3>Your workspace is waiting.</h3>
+                <p>You haven't added any ideas yet. Start with the idea you can't stop thinking about.</p>
+                <a href="#ignite" class="primary-btn">Create Your First Idea</a>
+            </div>
+        </section>
+
+
+        <!-- PROJECT DETAILS -->
+        <section class="content-section details-section" id="projectDetails">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PROJECT OVERVIEW</p>
+                    <h2>Project details.</h2>
+                </div>
+            </div>
+
+            <div id="detailsContent" class="details-card">
+                <p class="details-placeholder">Select a project from My Projects to see its details here.</p>
+            </div>
+        </section>
+
+
+        <!-- IDEA DNA -->
+        <section class="content-section" id="idea-dna">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">03 / THINK IT THROUGH</p>
+                    <h2>Discover your Idea DNA.</h2>
+                    <p>A simple checklist to help you evaluate how clearly you have shaped your idea.</p>
+                </div>
+            </div>
+
+            <div class="dna-card">
+                <div class="dna-intro">
+                    <span class="dna-symbol">✳</span>
+                    <div>
+                        <h3>Is your idea ready to take shape?</h3>
+                        <p>Choose a project and review the important parts of your idea.</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dnaProject">Choose a project</label>
+                    <select id="dnaProject">
+                        <option value="">Select a project</option>
+                    </select>
+                </div>
+
+                <div id="dnaChecklist" class="dna-checklist">
+                    <p class="details-placeholder">Select a project to begin your Idea DNA check.</p>
+                </div>
+
+                <button type="button" class="primary-btn" id="checkDnaBtn">Check Idea DNA →</button>
+                <div id="dnaResult" class="dna-result"></div>
+                <p class="dna-disclaimer">This is a basic checklist based on the information you provide. It is not an AI evaluation or a guarantee of business success.</p>
+            </div>
+        </section>
+
+
+        <footer class="page-footer">
+            <span>ECHO<span class="footer-dot">.</span></span>
+            <p>Built on ideas. Powered by people.</p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="innovator-workspace.js"></script>
+</body>
+</html>
